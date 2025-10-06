@@ -20,11 +20,11 @@ if command -v fdfind &>/dev/null && ! command -v fd &>/dev/null; then
 fi
 
 # Set zsh as default shell (do this BEFORE oh-my-zsh)
-ZSH_PATH=$(which zsh)
-if [ "$SHELL" != "$ZSH_PATH" ]; then
+ZSH_PATH=$(command -v zsh || true)
+if [ -n "$ZSH_PATH" ] && [ "$SHELL" != "$ZSH_PATH" ]; then
   echo "Setting zsh as default shell..."
   chsh -s "$ZSH_PATH"
-  echo "✓ Default shell set to zsh (takes effect on next login)"
+  echo "Default shell set to zsh (takes effect on next login)"
 fi
 
 # Install oh-my-zsh if not present

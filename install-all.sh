@@ -24,15 +24,11 @@ cp "$SCRIPT_DIR/ubuntu/.tmux.conf" "$HOME/.tmux.conf"
 echo "[OK] tmux.conf copied to $HOME"
 echo ""
 
-# Check if we're running in zsh, if not warn user
-if [ -z "${ZSH_VERSION:-}" ]; then
-  echo "WARNING: You're still running bash."
-  echo "   The next steps require zsh. Please run: exec zsh"
-  echo "   Then re-run this script, or manually run the remaining steps:"
-  echo "   - zsh $SCRIPT_DIR/ubuntu/scripts/install-node-npm.zsh"
-  echo "   - zsh $SCRIPT_DIR/ubuntu/scripts/neovim-setup.zsh"
-  echo ""
-  exit 0
+# Ensure zsh is installed and resolvable
+if ! command -v zsh >/dev/null 2>&1; then
+  echo "ERROR: zsh not found in PATH after bootstrap."
+  echo "Please log out/in (or open a new terminal) and run this script again."
+  exit 1
 fi
 
 # 3. Install Node.js ecosystem (requires zsh)
