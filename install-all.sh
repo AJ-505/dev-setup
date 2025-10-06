@@ -25,7 +25,7 @@ echo "[OK] tmux.conf copied to $HOME"
 echo ""
 
 # Check if we're running in zsh, if not warn user
-if [ -z "$ZSH_VERSION" ]; then
+if [ -z "${ZSH_VERSION:-}" ]; then
   echo "WARNING: You're still running bash."
   echo "   The next steps require zsh. Please run: exec zsh"
   echo "   Then re-run this script, or manually run the remaining steps:"
