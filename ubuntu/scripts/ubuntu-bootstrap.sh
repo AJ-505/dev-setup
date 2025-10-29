@@ -24,7 +24,7 @@ ZSH_PATH=$(command -v zsh || true)
 if [ -n "$ZSH_PATH" ] && [ "$SHELL" != "$ZSH_PATH" ]; then
   echo "Setting zsh as default shell..."
   chsh -s "$ZSH_PATH"
-  echo "Default shell set to zsh (takes effect on next login)"
+  echo "Default shell set to zsh"
 fi
 
 # Install oh-my-zsh if not present
@@ -47,6 +47,8 @@ if ! echo "$PATH" | grep -q "$HOME/.local/bin"; then
   echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$HOME/.zshrc"
 fi
 
-# Print summary
+# Invoke zsh
+zsh
+
 cat <<EOF
 \nSetup complete!\n- Zsh is your default shell\n- Oh My Zsh installed\n- Neovim (latest) installed as ~/.local/bin/nvim\n- Essential CLI tools installed\nEOF
