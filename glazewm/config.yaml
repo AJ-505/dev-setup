@@ -163,13 +163,13 @@ binding_modes:
   - name: 'resize'
     keybindings:
       - commands: ['resize --width -2%']
-        bindings: ['h', 'left']
+        bindings: ['h']
       - commands: ['resize --width +2%']
-        bindings: ['l', 'right']
+        bindings: ['l']
       - commands: ['resize --height +2%']
-        bindings: ['k', 'up']
+        bindings: ['k']
       - commands: ['resize --height -2%']
-        bindings: ['j', 'down']
+        bindings: ['j']
       # Press enter/escape to return to default keybindings.
       - commands: ['wm-disable-binding-mode --name resize']
         bindings: ['escape', 'enter']
@@ -177,23 +177,23 @@ binding_modes:
 keybindings:
   # Shift focus in a given direction.
   - commands: ['focus --direction left']
-    bindings: ['alt+h', 'alt+left', 'ctrl+alt+h', 'ctrl+alt+left']
+    bindings: ['alt+h', 'ctrl+alt+h']
   - commands: ['focus --direction right']
-    bindings: ['alt+l', 'alt+right', 'ctrl+alt+l', 'ctrl+alt+right']
+    bindings: ['alt+l', 'ctrl+alt+l']
   - commands: ['focus --direction up']
-    bindings: ['alt+k', 'alt+up', 'ctrl+alt+k', 'ctrl+alt+up']
+    bindings: ['alt+k', 'ctrl+alt+k']
   - commands: ['focus --direction down']
-    bindings: ['alt+j', 'alt+down', 'ctrl+alt+j', 'ctrl+alt+down']
+    bindings: ['alt+j', 'ctrl+alt+j']
 
   # Move focused window in a given direction.
   - commands: ['move --direction left']
-    bindings: ['alt+shift+h', 'alt+shift+left', 'ctrl+alt+shift+h', 'ctrl+alt+shift+left']
+    bindings: ['alt+shift+h', 'ctrl+alt+shift+h']
   - commands: ['move --direction right']
-    bindings: ['alt+shift+l', 'alt+shift+right', 'ctrl+alt+shift+l', 'ctrl+alt+shift+right']
+    bindings: ['alt+shift+l', 'ctrl+alt+shift+l']
   - commands: ['move --direction up']
-    bindings: ['alt+shift+k', 'alt+shift+up', 'ctrl+alt+shift+k', 'ctrl+alt+shift+up']
+    bindings: ['alt+shift+k', 'ctrl+alt+shift+k']
   - commands: ['move --direction down']
-    bindings: ['alt+shift+j', 'alt+shift+down', 'ctrl+alt+shift+j', 'ctrl+alt+shift+down']
+    bindings: ['alt+shift+j', 'ctrl+alt+shift+j']
 
   # Resize focused window by a percentage or pixel amount.
   - commands: ['resize --width -2%']
