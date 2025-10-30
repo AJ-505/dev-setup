@@ -121,13 +121,13 @@ window_behavior:
 
 workspaces:
   - name: '1'
-  - display_name: 'Web'
+    display_name: 'Web'
   - name: '2'
-  - display_name: 'Dev'
+    display_name: 'Dev'
   - name: '3'
-  - display_name: 'Comms'
+    display_name: 'Comms'
   - name: '4'
-  - display_name: 'Docs'
+    display_name: 'Docs'
   - name: '5'
   - name: '6'
   - name: '7'
