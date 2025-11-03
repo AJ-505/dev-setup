@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 set -euo pipefail
 
 echo "=========================================="
@@ -6,7 +6,7 @@ echo "  Dev Environment Setup"
 echo "=========================================="
 
 # Get the directory where this script is located
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${(%):-%N}")" && pwd)"
 
 # 1. Bootstrap Ubuntu (first ensure zsh is involved, installs tools + Neovim)
 echo "Step 1/4: Installing essential packages and Neovim..."
