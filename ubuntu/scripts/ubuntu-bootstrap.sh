@@ -47,8 +47,5 @@ if ! echo "$PATH" | grep -q "$HOME/.local/bin"; then
   echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$HOME/.zshrc"
 fi
 
-# Invoke zsh
-zsh
-
 cat <<EOF
 \nSetup complete!\n- Zsh is your default shell\n- Oh My Zsh installed\n- Neovim (latest) installed as ~/.local/bin/nvim\n- Essential CLI tools installed\nEOF
