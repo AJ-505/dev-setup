@@ -45,7 +45,7 @@ zsh ubuntu/scripts/neovim-setup.zsh
 ## What Gets Installed
 
 ### ubuntu-bootstrap.sh
-- **System packages**: zsh, unzip, jq, yq, tmux, fzf, ripgrep, bat, fd-find, git, curl, wget, build-essential, python3-pip, libfuse2
+- **System packages**: zsh, unzip, jq, tmux, fzf, ripgrep, bat, fd-find, git, curl, wget, build-essential, python3-pip, libfuse2
 - **Shell**: oh-my-zsh + sets zsh as default shell
 - **Neovim**: Latest stable AppImage installed to `~/.local/bin/nvim`
 

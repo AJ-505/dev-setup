@@ -10,7 +10,6 @@ This document verifies the correct installation order to avoid dependency issues
    - `zsh` - required for all subsequent .zsh scripts
    - `unzip` - required by fnm installer
    - `jq` - required for parsing GitHub API (Neovim latest tag)
-   - `yq` - YAML processor utility
    - `curl`, `wget` - required for downloading installers
    - `git` - required for cloning repos
    - `build-essential` - required for compiling native modules (Neovim dependencies)
