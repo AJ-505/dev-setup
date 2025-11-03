@@ -20,8 +20,8 @@ else
   exit 1
 fi
 
-chmod +x "$SCRIPT_DIR/ubuntu/scripts/ubuntu-bootstrap.sh"
-"$SCRIPT_DIR/ubuntu/scripts/ubuntu-bootstrap.sh"
+chmod +x "$SCRIPT_DIR/ubuntu/scripts/ubuntu-bootstrap.zsh"
+"$SCRIPT_DIR/ubuntu/scripts/ubuntu-bootstrap.zsh"
 echo "[OK] Bootstrap complete"
 echo ""
 

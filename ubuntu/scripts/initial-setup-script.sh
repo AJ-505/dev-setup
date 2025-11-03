@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Install zsh
-sudo apt install zsh
+sudo apt install -y zsh
 
 # Set zsh as default shell 
 ZSH_PATH=$(command -v zsh || true)

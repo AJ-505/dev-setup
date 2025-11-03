@@ -4,7 +4,7 @@ This document verifies the correct installation order to avoid dependency issues
 
 ## Step 0 (pre-requisite): Ensure zsh is installed (and set as default), with.. Oh My ZSH! - initial-setup-script.sh
 
-## Step 1: ubuntu-bootstrap.sh (runs in bash)
+## Step 1: ubuntu-bootstrap.zsh (runs in zsh)
 
 **Installs in order:**
 1. [OK] `sudo apt update && sudo apt upgrade -y`
