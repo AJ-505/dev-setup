@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 set -euo pipefail
 
 # Update and upgrade
@@ -17,20 +17,6 @@ fi
 # Symlink fd-find to fd if needed
 if command -v fdfind &>/dev/null && ! command -v fd &>/dev/null; then
   sudo ln -s $(command -v fdfind) /usr/local/bin/fd
-fi
-
-# Set zsh as default shell (do this BEFORE oh-my-zsh)
-ZSH_PATH=$(command -v zsh || true)
-if [ -n "$ZSH_PATH" ] && [ "$SHELL" != "$ZSH_PATH" ]; then
-  echo "Setting zsh as default shell..."
-  chsh -s "$ZSH_PATH"
-  echo "Default shell set to zsh"
-fi
-
-# Install oh-my-zsh if not present
-if [ ! -d "$HOME/.oh-my-zsh" ]; then
-  echo "Installing oh-my-zsh..."
-  RUNZSH=no CHSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 # Install Neovim (latest AppImage)

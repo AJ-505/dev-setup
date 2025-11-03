@@ -4,15 +4,22 @@ set -euo pipefail
 echo "=========================================="
 echo "  Dev Environment Setup"
 echo "=========================================="
-echo ""
 
 # Get the directory where this script is located
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# 1. Bootstrap Ubuntu (installs zsh, sets as default, installs tools + Neovim)
-echo "Step 1/4: Installing essential packages, zsh, and Neovim..."
-echo "Note: This installs zsh and sets it as your default shell."
-echo ""
+# 1. Bootstrap Ubuntu (first ensure zsh is involved, installs tools + Neovim)
+echo "Step 1/4: Installing essential packages and Neovim..."
+echo "Note: Please ensure zsh has been installed and set as the default shell."
+echo "If it hasn't, please run the initial-setup-script.sh script in the ubuntu/scripts folder."
+
+if [ "$(ps -p $$ -o comm=)" = "zsh" ]; then
+  echo "Running inside zsh"
+else
+  echo "You're not running inside zsh. Please run the initial-setup-script.sh script in the ubuntu/scripts folder."
+  exit 1
+fi
+
 chmod +x "$SCRIPT_DIR/ubuntu/scripts/ubuntu-bootstrap.sh"
 "$SCRIPT_DIR/ubuntu/scripts/ubuntu-bootstrap.sh"
 echo "[OK] Bootstrap complete"
