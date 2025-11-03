@@ -1,6 +1,8 @@
 # Installation Order & Dependencies
 
-This document verifies the correct installation order to avoid dependency issues.
+This document verifies the correct installation order to avoid dependency issues. Will be useful if you intend to run the scripts individually yourself.
+
+## Step 0 (pre-requisite): Ensure zsh is installed (and set as default), with.. Oh My ZSH! - initial-setup-script.sh
 
 ## Step 1: ubuntu-bootstrap.sh (runs in bash)
 

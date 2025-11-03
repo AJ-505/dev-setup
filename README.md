@@ -23,11 +23,15 @@ The script will detect if you're in bash and prompt you to switch to zsh after i
 Run these commands in order on a fresh Ubuntu installation:
 
 ```bash
-# 1. Bootstrap Ubuntu with essential tools, zsh, oh-my-zsh, and Neovim
+# Step 0 (prerequisite): Ensure zsh is installed (and set as default)
+chmod +x ubuntu/scripts/initial-setup-script.sh
+./ubuntu/scripts/initial-setup-script.sh
+
+# Step 1. Bootstrap Ubuntu with essential tools, zsh, oh-my-zsh, and Neovim
 chmod +x ubuntu/scripts/ubuntu-bootstrap.sh
 ./ubuntu/scripts/ubuntu-bootstrap.sh
 
-# 2. Switch to zsh (required for remaining steps)
+# 2. Switch to zsh if not already on zsh (required for remaining steps) - the initial setup script does it automatically
 exec zsh
 
 # 3. Copy tmux configuration
