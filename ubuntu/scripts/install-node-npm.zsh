@@ -1,10 +1,10 @@
 #!/usr/bin/env zsh
 set -euo pipefail
 
-# Install fnm (Fast Node Manager)
+# Install fnm (Fast Node Manager) via the recommended installation script
 if ! command -v fnm &>/dev/null; then
-	curl -fsSL https://fnm.vercel.app/install | zsh
-	export PATH="$HOME/.fnm/bin:$PATH"
+  curl -fsSL https://raw.githubusercontent.com/Schniz/fnm/refs/heads/master/.ci/install.sh | bash
+  [ -f ~/.zshrc ] && source ~/.zshrc
 fi
 
 # Get the latest Node.js version (strip the 'v' prefix)
