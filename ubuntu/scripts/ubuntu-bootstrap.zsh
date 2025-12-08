@@ -6,7 +6,7 @@ sudo apt update && sudo apt upgrade -y
 
 # Install core CLI tools
 sudo apt install -y \
-  zsh xclip unzip jq tmux fzf ripgrep bat fd-find git curl wget build-essential python3-pip \
+  zsh xclip unzip jq tmux fzf ripgrep bat fd-find git curl wget build-essential python3-venv python3-pip \
   libfuse2
 
 # Symlink batcat to bat if needed
