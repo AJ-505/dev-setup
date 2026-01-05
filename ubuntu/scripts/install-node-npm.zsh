@@ -23,7 +23,7 @@ node -v
 npm -v
 
 # Install global npm packages
-npm install -g pnpm yarn typescript typescript-language-server markdownlint-cli
+npm install -g pnpm yarn typescript typescript-language-server markdownlint-cli @fsouza/prettierd
 # Deno and Bun are separate runtimes, install via their official scripts
 if ! command -v deno &>/dev/null; then
 	curl -fsSL https://deno.land/install.sh | sh
